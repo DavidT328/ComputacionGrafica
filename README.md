@@ -1,5 +1,3 @@
-# 📘 Reporte de Práctica Nº 01  
-
 **Universidad Nacional Autónoma de México**  
 **Facultad de Ingeniería**  
 **División de Ingeniería Eléctrica**  
@@ -14,6 +12,5 @@
 - **Grupo de laboratorio:** 13  
 - **Grupo de teoría:** 06  
 - **Semestre:** 2026-1  
-- **Fecha de entrega límite:** 28/08/2025  
 
 
