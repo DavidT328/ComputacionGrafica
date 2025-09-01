@@ -1,0 +1,23 @@
+﻿  Mesh.cpp
+  P02-320054831.cpp
+C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\P2\Window.h(12,36): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+  (compiling source file 'P02-320054831.cpp')
+  
+C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\P2\Window.h(13,37): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+  (compiling source file 'P02-320054831.cpp')
+  
+C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\P2\P02-320054831.cpp(17,36): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Shader.cpp
+  Window.cpp
+C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\P2\Window.h(12,36): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+  (compiling source file 'Window.cpp')
+  
+C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\P2\Window.h(13,37): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+  (compiling source file 'Window.cpp')
+  
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\P2\Window.cpp(74): warning C4715: 'Window::Initialise': not all control paths return a value
+  All 380 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  P2.vcxproj -> C:\Users\taver\OneDrive\Documentos\7mo Semestre\Computación Gráfica\PracticasEnVisual\CGIH\Release\P2.exe
