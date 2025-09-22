@@ -1,5 +1,12 @@
 #include "Window.h"
 
+float clamp(float value, float minVal, float maxVal)
+{
+	if (value < minVal) return minVal;
+	if (value > maxVal) return maxVal;
+	return value;
+}
+
 Window::Window()
 {
 	width = 800;
@@ -25,6 +32,9 @@ Window::Window(GLint windowWidth, GLint windowHeight)
 	articulacion7 = 0.0f;
 	articulacion8 = 0.0f;
 	articulacion9 = 0.0f;
+	posX = 0.0f;
+	posY = 0.0f;
+	posZ = 0.0f;
 	
 	for (size_t i = 0; i < 1024; i++)
 	{
@@ -48,7 +58,7 @@ int Window::Initialise()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	//CREAR VENTANA
-	mainWindow = glfwCreateWindow(width, height, "Practica 04: Modelado Jerarquico", NULL, NULL);
+	mainWindow = glfwCreateWindow(width, height, "Practica 05: Optimizacion y Carga de Modelos", NULL, NULL);
 
 	if (!mainWindow)
 	{
@@ -128,42 +138,62 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	{
 		theWindow->rotaz += 10.0;
 	}
-	if (key == GLFW_KEY_F)
+	if (key == GLFW_KEY_O)
 	{
 		theWindow->articulacion1 += 10.0;
 	}
 
-	if (key == GLFW_KEY_G)
+	if (key == GLFW_KEY_P)
+	{
+		theWindow->articulacion1 -= 10.0;
+	}
+	if (key == GLFW_KEY_U)
 	{
 		theWindow->articulacion2 += 10.0;
+		theWindow->articulacion2 = clamp(theWindow->articulacion2, 0.0f, 45.0f);
 	}
-	if (key == GLFW_KEY_H)
+	if (key == GLFW_KEY_P)  
 	{
-		theWindow->articulacion3 += 10.0;
+		theWindow->posZ -= 0.1f;
 	}
-	if (key == GLFW_KEY_J)
+	if (key == GLFW_KEY_O) 
 	{
-		theWindow->articulacion4 += 10.0;
+		theWindow->posZ += 0.1f;
+	}
+	if (key == GLFW_KEY_I)
+	{
+		theWindow->articulacion2 -= 10.0;
+		theWindow->articulacion2 = clamp(theWindow->articulacion2, 0.0f, 45.0f);
 	}
 	if (key == GLFW_KEY_K)
 	{
-		theWindow->articulacion5 += 10.0;
+		theWindow->articulacion3 += 10.0;
+		theWindow->articulacion3 = clamp(theWindow->articulacion3, -45.0f, 45.0f);
 	}
 	if (key == GLFW_KEY_L)
 	{
-		theWindow->articulacion6 += 10.0;
+		theWindow->articulacion3 -= 10.0;
+		theWindow->articulacion3 = clamp(theWindow->articulacion3, -45.0f, 45.0f);
 	}
-	if (key == GLFW_KEY_M)
+	if (key == GLFW_KEY_H)
 	{
-		theWindow->articulacion7 += 10.0;
+		theWindow->articulacion4 += 10.0;
+		theWindow->articulacion4 = clamp(theWindow->articulacion4, -45.0f, 45.0f);
+	}
+	if (key == GLFW_KEY_J)
+	{
+		theWindow->articulacion4 -= 10.0;
+		theWindow->articulacion4 = clamp(theWindow->articulacion4, -45.0f, 45.0f);
 	}
 	if (key == GLFW_KEY_N)
 	{
-		theWindow->articulacion8 += 10.0;
+		theWindow->articulacion5 += 10.0;
+		theWindow->articulacion5 = clamp(theWindow->articulacion5, -45.0f, 45.0f);
 	}
-	if (key == GLFW_KEY_B)
+	if (key == GLFW_KEY_M)
 	{
-		theWindow->articulacion9 += 10.0;
+		theWindow->articulacion5 -= 10.0;
+		theWindow->articulacion5 = clamp(theWindow->articulacion5, -45.0f, 45.0f);
 	}
 
 	if (key == GLFW_KEY_D && action == GLFW_PRESS)
