@@ -35,7 +35,7 @@ Window::Window(GLint windowWidth, GLint windowHeight)
 	posX = 0.0f;
 	posY = 0.0f;
 	posZ = 0.0f;
-	
+
 	for (size_t i = 0; i < 1024; i++)
 	{
 		keys[i] = 0;
@@ -58,7 +58,7 @@ int Window::Initialise()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	//CREAR VENTANA
-	mainWindow = glfwCreateWindow(width, height, "Practica 05: Optimizacion y Carga de Modelos", NULL, NULL);
+	mainWindow = glfwCreateWindow(width, height, "Practica 06: Texturas", NULL, NULL);
 
 	if (!mainWindow)
 	{
@@ -88,9 +88,9 @@ int Window::Initialise()
 	}
 
 	glEnable(GL_DEPTH_TEST); //HABILITAR BUFFER DE PROFUNDIDAD
-							 // Asignar valores de la ventana y coordenadas
-							 
-							 //Asignar Viewport
+	// Asignar valores de la ventana y coordenadas
+
+	//Asignar Viewport
 	glViewport(0, 0, bufferWidth, bufferHeight);
 	//Callback para detectar que se está usando la ventana
 	glfwSetWindowUserPointer(mainWindow, this);
@@ -125,7 +125,7 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
 
-	
+
 	if (key == GLFW_KEY_E)
 	{
 		theWindow->rotax += 10.0;
@@ -150,20 +150,20 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	if (key == GLFW_KEY_U)
 	{
 		theWindow->articulacion2 += 10.0;
-		theWindow->articulacion2 = clamp(theWindow->articulacion2, 0.0f, 45.0f);
+		theWindow->articulacion2 = clamp(theWindow->articulacion2, -45.0f, 0.0f);
 	}
-	if (key == GLFW_KEY_P)  
+	if (key == GLFW_KEY_P)
 	{
 		theWindow->posZ -= 0.1f;
 	}
-	if (key == GLFW_KEY_O) 
+	if (key == GLFW_KEY_O)
 	{
 		theWindow->posZ += 0.1f;
 	}
 	if (key == GLFW_KEY_I)
 	{
 		theWindow->articulacion2 -= 10.0;
-		theWindow->articulacion2 = clamp(theWindow->articulacion2, 0.0f, 45.0f);
+		theWindow->articulacion2 = clamp(theWindow->articulacion2, -45.0f, 0.0f);
 	}
 	if (key == GLFW_KEY_K)
 	{
