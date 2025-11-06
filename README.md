@@ -11,7 +11,10 @@
 - **Número de cuenta:** 320054831  
 - **Grupo de laboratorio:** 13  
 - **Grupo de teoría:** 06  
-- **Semestre:** 2026-1  
+- **Semestre:** 2026-1
+
+- **Añado Link de Drive para modelos y texturas**
+https://drive.google.com/drive/folders/1NJg8g2YnRgIUZa5uu7K0hqajwrhCCoZn?usp=sharing
 
 
 
